@@ -34,23 +34,13 @@ function Input() {
         if (e.key == "f") { this.f = true; }
         if (e.key == "w") { this.w = true; }
     }
-    // --------------------------------------------------------------------------
-    function onKeyUp(appInput) {
-        if (appInput.key == "ArrowUp") { this.up = false; }
-        if (appInput.key == "ArrowDown") { this.down = false; }
-        if (appInput.key == "ArrowLeft") { this.left = false; }
-        if (appInput.key == "ArrowRight") { this.right = false; }
-        if (appInput.key == "a") { this.a = false; }
-        if (appInput.key== "s") { this.s = false; }
-        if (appInput.key == "d") { this.d = false; }
-        if (appInput.key == "f") { this.f = false; }
-        if (appInput.key == "w") { this.w = false; }
-    }
+
 
 
     //---------------------------------------
 	window.addEventListener('keydown', onKeyDown.bind(this));
     window.addEventListener('keyup', onKeyUp.bind(this));
+  
 }
 
 // EOF 00100001-10

@@ -130,10 +130,27 @@ function updateAndRender() {
     requestAnimationFrame(updateAndRender);
 
     var aspectRatio = gl.canvasWidth / gl.canvasHeight;
-
+    lightDirection =  new Vector3(5,3,0);
+    
+ 
+    var lightDirection1 = new Vector4(lightDirection.w,lightDirection.x,lightDirection.y,lightDirection.z);
     // todo #10
     // add keyboard controls for changing light direction here
+    
 
+    if (appInput.left) {
+        lightDirection= new Matrix4().makeRotationY().multiplyVector(new Vector4(lightDirection.w,lightDirection.x,lightDirection.y,lightDirection.z));
+        
+    
+    }
+
+    if (appInput.right) {
+        
+        lightDirection= new Matrix4().makeRotationY().multiplyVector(new Vector4(lightDirection.w,lightDirection.x,lightDirection.y,lightDirection.z));
+        
+    }
+    
+    
     time.update();
     camera.update(time.deltaTime);
 
